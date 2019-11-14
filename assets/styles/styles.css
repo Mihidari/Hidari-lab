@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "above";
+    src: url('../fonts/abovedemoregular-ljmd-webfont.woff') format("woff"),
+    url('../fonts/abovedemoregular-ljmd-webfont.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: "helvetica";
+    src: url('../fonts/helvetica-webfont.woff') format("woff"),
+    url('../fonts/abovedemoregular-ljmd-webfont.woff2') format('woff2')
+}
+
+html, body {
+    margin : 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+* {
+    transition: all 1.5s;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #exp {
+        width: 99vw!important;
+    }   
+
+    footer {
+        position: relative!important;
+        bottom: unset!important;
+    }
+
+    #flexbox {
+        flex-direction: column!important;
+    }   
+
+    pre {
+        width: 99vw!important;
+        font-size: 0.75rem;
+    }
+}
