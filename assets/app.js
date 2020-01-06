@@ -113,7 +113,6 @@ return new Promise((resolve, reject) => {
 })
 }
 
-
 let redactionState = 0
 let state = 0
 let pro = document.getElementsByClassName('project-content');
