@@ -36,6 +36,15 @@ class Quine {
                     this.pos++
                 }
             }
+            if(this.jsPos.indexOf(this.avancement) !== -1) {
+                if(this.arrayJS[this.stateJs] != undefined) {
+                    try {
+                        eval(this.arrayJS[this.stateJs])
+                    } catch(e) {
+                        console.error(e)
+                    }
+                }
+            }
         }, this.speed)
     }
 
@@ -62,6 +71,7 @@ class Quine {
         this.jsPos = []
         this.posStyle = 0
         this.pos = 0
+        this.stateJs = 0
         let add = 0
         let line = false
 
@@ -76,9 +86,9 @@ class Quine {
                 add++
             } else if (line === true && arrayContent[i] === '\n') {
                 line = false
-                this.par.push(i+1)
+                this.par.push(i)
                 this.jsPos.push(i+1)
-                this.arrayJS.push(this.screenPlay.slice(this.par[add-1], this.par[add]))
+                this.arrayJS.push(this.screenPlay.slice(this.par[add-1]+4, this.par[add]))
                 add++
             } else if(arrayContent[i] === '$'){
                 line = true
@@ -106,6 +116,6 @@ class Quine {
     }
 }
 
-let quine = new Quine(trueText, document.getElementById('content'), document.getElementById('jsstyle'), 18)
+let quine = new Quine(trueText, document.getElementById('content'), document.getElementById('jsstyle'), 12)
 console.log(quine)
 quine.start()

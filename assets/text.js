@@ -9,7 +9,7 @@ let trueText = `<span class="comment">/**
 * mais pour cette fois je vous laisse avec mon robot.
 */</span>
 
-$ document.getElementById('test').innerHTML = "test"
+$ console.log('ok')
 
 <span class="comment">/**
 * Robot rights protected under BOT License
