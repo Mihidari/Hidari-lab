@@ -48,8 +48,8 @@ const writeChar = async (chaine) => {
             document.getElementsByClassName('head-exp')[0].innerHTML = '<h2 id="titre_exp">Mes expériences</h2><img id="science" src="assets/images/science.png" width="50px" height="50px"/>'
         }
 
-        if(globalAvancement === 3808) {
-            document.getElementsByClassName('project')[0].innerHTML = `<img src='assets/images/vlight.png' alt='logo-vlight' width='70px' height='60px'/><p class="project-content">Vlight - Outil de gestion des performances, en temps réel, de serveurs dédiés, VPS, server-less<br><a href="https://vlight.io" target="_blank">https://vlight.io</a></p>` 
+        if(globalAvancement === 3757) {
+            document.getElementsByClassName('project')[0].innerHTML = `<img src='assets/images/vlight.png' alt='logo-vlight' width='70px' height='60px'/><p class="project-content">VLight - Outil de gestion de serveurs dédiés, VPS, server-less (Le site est actuellement en migration)</p>` 
             document.getElementsByClassName('project')[1].innerHTML = `<img src='assets/images/symfony.svg' alt='logo-symfony' width='60px' height='60px'/><p class="project-content">Site web sous Symfony pour des associations, back-office et carte interactive avec géolocalisation</p>`
             document.getElementsByClassName('project')[2].innerHTML = `<img src='assets/images/discord.png' alt='logo-discord' width='60px' height='60px'/><p class="project-content">Des bots pour Discord, Slack, Twitch. Gestion des utilisateurs et utilisation d'API externe</p>`
         }
@@ -59,11 +59,11 @@ const writeChar = async (chaine) => {
             redaction()
         }
 
-        if(globalAvancement === 4051) {
+        if(globalAvancement === 4000) {
             document.getElementById('contact').innerHTML = `<hr/><p id="mail">Contact: theo.lanique@gmail.com</p>`
         }
 
-        if(globalAvancement === 4807) {
+        if(globalAvancement === 4757 ) {
             clearInterval(intervalChar)
         }
 
@@ -83,7 +83,7 @@ const writeChar = async (chaine) => {
             }
         }
 
-    }, 18)
+    }, 20)
 }
 
 
@@ -113,6 +113,7 @@ return new Promise((resolve, reject) => {
 })
 }
 
+
 let redactionState = 0
 let state = 0
 let pro = document.getElementsByClassName('project-content');
@@ -124,9 +125,6 @@ const redaction = () => {
         if(redactionState === project[state].length) {
             redactionState = 0
             state++
-            if(state === 1) {
-                document.getElementsByClassName('project')[0].innerHTML = `<p class="project-content">Vlight - Outil de gestion des performances, en temps réel, de serveurs dédiés, VPS, server-less<br><a href="https://vlight.io" target="_blank">https://vlight.io</a></p>`
-            }
         }
         if (state === project.length) {
             writeChar(fullContent);
